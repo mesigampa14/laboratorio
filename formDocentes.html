@@ -6,36 +6,42 @@
   <title>Gestión de Trabajos Finales</title>
 </head>
 <body>
-  <ul>
-    <li><a href="/">Inicio</a></li>
-    <li><a href="formCSTF.html">integrantes CSTF</a></li>
-    <li>
-      Alumnos
+  <header>
+    <nav>
       <ul>
-        <li><a href="formAlumnos.html">Ingreso de alumnos</a></li>
-        <li><a href="integrantesGrupo.html">Ingreso a Grupo</a></li>
-        <li></li>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="formCSTF.html">integrantes CSTF</a></li>
+        <li>
+          Alumnos
+          <ul>
+            <li><a href="formAlumnos.html">Ingreso de alumnos</a></li>
+            <li><a href="integrantesGrupo.html">Ingreso a Grupo</a></li>
+            <li></li>
+          </ul>
+        </li>
+        <li>
+          Docentes
+          <ul>
+            <li><a href="formDocentes.html">Ingreso de Docentes</a></li>
+            <li><a href="integrantesTribunal.html">Ingreso a Tribunal</a></li>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="/estadisticas.html">Estadisticas</a></li>
       </ul>
-    </li>
-    <li>
-      Docentes
-      <ul>
-        <li><a href="formDocentes.html">Ingreso de Docentes</a></li>
-        <li><a href="integrantesTribunal.html">Ingreso a Tribunal</a></li>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="/estadisticas.html">Estadisticas</a></li>
-  </ul>
-  <h1>Registro de docentes</h1>
-  <form>
-    <label for="cuil">CUIL:</label><br>
-    <input type="text" id="cuil" name="cuil"><br><br>
-    <label for="apellido">Apellidos:</label><br>
-    <input type="text" id="apellido" name="apellido"><br><br>
-    <label for="nombre">Nombres:</label><br>
-    <input type="text" id="nombre" name="nombre"><br><br>
-    <input type="submit" value="Guardar">
-  </form>
+    </nav>
+  </header>
+  <section>
+    <h1>Registro de docentes</h1>
+    <form>
+      <label for="cuil">CUIL:</label><br>
+      <input type="text" id="cuil" name="cuil"><br><br>
+      <label for="apellido">Apellidos:</label><br>
+      <input type="text" id="apellido" name="apellido"><br><br>
+      <label for="nombre">Nombres:</label><br>
+      <input type="text" id="nombre" name="nombre"><br><br>
+      <input type="submit" value="Guardar">
+    </form>
+  </section>
 </body>
 </html>
