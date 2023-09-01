@@ -1,0 +1,10 @@
+.mt-64{
+  margin-top: 5rem !important;
+}
+.titleBtn{
+  display: flex;
+  justify-content: space-between;
+}
+.heightBtn{
+  height: 38px;
+}
