@@ -36,6 +36,45 @@
         });
     </script>
 
+    <script>
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+        console.log(forms);
+
+        // Loop over them and prevent submission
+        /*Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });*/
+      })();
+
+      function verificar(event) {
+        const fecha = document.forms["formulario"]["fecha_alta"].value;
+        const tiempoTranscurrido = Date.now();
+        const hoy = new Date(tiempoTranscurrido);
+        hoy.toDateString();
+        hoy.toISOString();
+
+        fecha > hoy.toISOString() &&
+          alert("La fecha de ingreso es posterior a la fecha actual");
+
+        return false;
+      }
+    </script>
+
     <section class="container mt-64">
       <div class="titleBtn mb-3">
         <h1>Nuevo Proyecto</h1>
@@ -62,14 +101,28 @@
           Volver
         </a>
       </div>
-      <form class="row">
+      <form
+        class="row g-3 needs-validation"
+        novalidate
+        name="formulario"
+        onsubmit="return verificar()"
+      >
+        <div class="mb-3 col-md-6">
+          <label for="exampleInputEmail1" class="form-label">Fecha</label>
+          <input
+            type="date"
+            class="form-control"
+            id="fecha_alta"
+            aria-describedby="Fecha de Inscripción"
+          />
+        </div>
         <div class="mb-3 col-md-6">
           <label for="exampleInputEmail1" class="form-label">Título</label>
           <input
             type="text"
             class="form-control"
             id="nombre"
-            aria-describedby="emailHelp"
+            aria-describedby="Titulo del Proyecto"
           />
         </div>
         <div class="mb-3 col-md-12">
@@ -78,7 +131,7 @@
             type="text"
             class="form-control"
             id="exampleInputEmail1"
-            aria-describedby="emailHelp"
+            aria-describedby="Descripción del Proyecto"
           />
         </div>
         <div class="mb-3 col-md-6">
