@@ -26,19 +26,18 @@
 
     <div id="header"></div>
 
-    <section class="container mt-64">
+    <section class="container mt-64" id="vistaDocentes">
       <div class="titleBtn mb-3">
         <h1>Listado de Docentes</h1>
         <a
           class="btn btn-outline-success heightBtn"
           type="submit"
-          onclick="changeShow()"
+          onclick="nuevoDocente()"
         >
           <span class="plus"></span>
           Crear nuevo
         </a>
       </div>
-      <div class="mb-3" id="docenteForm" style="display: none"></div>
       <table class="table table-hover">
         <thead>
           <tr>
@@ -51,6 +50,16 @@
         <tbody id="lista-docentes"></tbody>
       </table>
     </section>
+    <section
+      class="container mt-64"
+      id="docenteForm"
+      style="display: none"
+    ></section>
+    <section
+      class="container mt-64"
+      id="detalleDocente"
+      style="display: none"
+    ></section>
 
     <div id="footer"></div>
   </body>

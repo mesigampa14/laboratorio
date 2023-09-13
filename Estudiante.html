@@ -26,19 +26,18 @@
 
     <div id="header"></div>
 
-    <section class="container mt-64">
+    <section class="container mt-64" id="vistaEstudiantes">
       <div class="titleBtn mb-3">
         <h1>Listado de Estudiantes</h1>
         <a
           class="btn btn-outline-success heightBtn"
           type="submit"
-          onclick="changeShowEst()"
+          onclick="nuevoEstudiante()"
         >
           <span class="plus"></span>
           Crear nuevo
         </a>
       </div>
-      <div class="mb-3" id="estudianteForm" style="display: none"></div>
       <table class="table table-hover">
         <thead>
           <tr>
@@ -46,12 +45,22 @@
             <th scope="col">DNI</th>
             <th scope="col">Apellido y Nombre</th>
             <th scope="col">Correo Electrónico</th>
-            <th scope="col">Quitar</th>
+            <th scope="col">Acciones</th>
           </tr>
         </thead>
         <tbody id="lista-estudiantes"></tbody>
       </table>
     </section>
+    <section
+      class="container mt-64"
+      id="estudianteForm"
+      style="display: none"
+    ></section>
+    <section
+      class="container mt-64"
+      id="detalleEstudiante"
+      style="display: none"
+    ></section>
 
     <div id="footer"></div>
   </body>

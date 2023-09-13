@@ -1,3 +1,17 @@
+class Proyecto {
+  constructor(fecha, titulo, descripcion, archivos, estado, observacion) {
+    this.fecha = fecha;
+    this.titulo = titulo;
+    this.descripcion = descripcion;
+    this.archivos = archivos;
+    this.estado = estado;
+    this.observacion = observacion;
+  }
+
+  setObservacion(observacion) {
+    this.observacion = observacion;
+  }
+}
 class Persona {
   constructor(apellido, nombre, genero, dni) {
     this.apellido = apellido;

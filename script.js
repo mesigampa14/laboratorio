@@ -73,3 +73,11 @@ fetch("btn/search.html")
       elementos[i].innerHTML = html;
     }
   });
+
+const changeShow = (section) => {
+  let nuevo = document.getElementById(section);
+
+  nuevo.style.display === "none"
+    ? (nuevo.style.display = "block")
+    : (nuevo.style.display = "none");
+};

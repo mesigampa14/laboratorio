@@ -16,24 +16,36 @@ function validacion() {
   const correo_electronico =
     document.forms["formulario"]["correo_electronico"].value;
 
-  const nuevo = new Estudiante(
-    apellido,
-    nombre,
-    genero,
-    dni,
-    matricula,
-    correo_electronico,
-    "",
-    ""
-  );
+  if (
+    !matricula ||
+    !dni ||
+    !nombre ||
+    !apellido ||
+    !genero ||
+    !correo_electronico
+  ) {
+    alert("Complete los campos");
+    return false;
+  } else {
+    const nuevo = new Estudiante(
+      apellido,
+      nombre,
+      genero,
+      dni,
+      matricula,
+      correo_electronico,
+      "",
+      ""
+    );
 
-  console.log(nuevo.registrar());
-  agregarEstudiante(nuevo);
+    console.log(nuevo.registrar());
+    agregarEstudiante(nuevo);
 
-  resetForm();
-  changeShowEst();
-  alert("Se ha guardado correctamente");
-  return false;
+    resetForm();
+    alert("Se ha guardado correctamente");
+    vistaEstudiante("estudianteForm");
+    return false;
+  }
 }
 
 function quitar(dni) {
