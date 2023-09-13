@@ -1,0 +1,89 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+  crossorigin="anonymous"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+  crossorigin="anonymous"
+></script>
+
+<section class="container">
+  <form class="row" name="formulario" onsubmit="return validacion()">
+    <div class="mb-3 col-md-6">
+      <label for="exampleInputEmail1" class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3 col-md-6">
+      <label for="exampleInputEmail1" class="form-label">Apellido</label>
+      <input
+        type="text"
+        class="form-control"
+        id="apellido"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3 col-md-6">
+      <label for="exampleInputEmail1" class="form-label">DNI</label>
+      <input
+        type="number"
+        class="form-control"
+        id="dni"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3 col-md-6">
+      <label for="exampleInputEmail1" class="form-label">Género</label>
+      <select
+        class="form-select"
+        id="genero"
+        aria-label="Default select example"
+      >
+        <option selected>Seleccionar genero</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Masculino">Masculino</option>
+        <option value="No Binario">No Binario</option>
+      </select>
+    </div>
+    <div class="mb-3 col-md-6">
+      <label for="exampleInputEmail1" class="form-label">CUIL</label>
+      <input
+        type="number"
+        class="form-control"
+        id="cuil"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3 col-md-6">
+      <label for="exampleInputEmail1" class="form-label">Asignatura</label>
+      <input
+        type="text"
+        class="form-control"
+        id="asignatura"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3 col-md-6">
+      <label for="exampleInputEmail1" class="form-label">Comisión</label>
+      <input
+        type="text"
+        class="form-control"
+        id="comision"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-success">
+        <span class="save"></span>
+        Agregar
+      </button>
+    </div>
+  </form>
+</section>

@@ -19,6 +19,8 @@
     ></script>
     <script src="script.js"></script>
     <script src="defObjetos.js"></script>
+    <script src="script/Estudiante/EstudianteForm.js"></script>
+    <script src="script/Estudiante/EstudianteLista.js"></script>
 
     <style id="style"></style>
 
@@ -26,47 +28,28 @@
 
     <section class="container mt-64">
       <div class="titleBtn mb-3">
-        <h1>Listado de Proyectos</h1>
+        <h1>Listado de Estudiantes</h1>
         <a
-          href="ProyectosForm.html"
           class="btn btn-outline-success heightBtn"
           type="submit"
+          onclick="changeShowEst()"
         >
           <span class="plus"></span>
           Crear nuevo
         </a>
       </div>
+      <div class="mb-3" id="estudianteForm" style="display: none"></div>
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">Presentación</th>
-            <th scope="col">Título</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Ver más</th>
+            <th scope="col">Matrícula</th>
+            <th scope="col">DNI</th>
+            <th scope="col">Apellido y Nombre</th>
+            <th scope="col">Correo Electrónico</th>
+            <th scope="col">Quitar</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td scope="row">2023/04/26</td>
-            <td>ASDF</td>
-            <td>Aceptado</td>
-            <td>
-              <button class="btn btn-outline-primary" type="submit">
-                <span class="search"></span>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td scope="row">2023/06/14</td>
-            <td>GGG</td>
-            <td>Observado</td>
-            <td>
-              <button class="btn btn-outline-primary" type="submit">
-                <span class="search"></span>
-              </button>
-            </td>
-          </tr>
-        </tbody>
+        <tbody id="lista-estudiantes"></tbody>
       </table>
     </section>
 

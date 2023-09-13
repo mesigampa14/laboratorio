@@ -10,7 +10,7 @@ certificado analítico
 nota de aceptación de director
 curriculum vitae del asesor
 
-    Alumnos
+    Estudiantes
         matricula
         dni
         apellidos nombre
