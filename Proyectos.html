@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Trabajos Finales</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script src="defObjetos.js"></script>
+    <script src="script/Proyectos/ProyectoForm.js"></script>
+    <script src="script/Proyectos/ProyectoLista.js"></script>
+    <script src="script/Estudiante/EstudianteLista.js"></script>
+    <script src="script/Docente/DocenteLista.js"></script>
+
+    <style id="style"></style>
+
+    <div id="header"></div>
+
+    <section class="container mt-64" id="vistaProyectos">
+      <div class="titleBtn mb-3">
+        <h1>Listado de Proyectos</h1>
+        <a
+          class="btn btn-outline-success heightBtn"
+          type="submit"
+          onclick="nuevoProyecto()"
+        >
+          <span class="plus"></span>
+          Crear nuevo
+        </a>
+      </div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Presentación</th>
+            <th scope="col">Título</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Ver más</th>
+          </tr>
+        </thead>
+        <tbody id="lista-proyectos"></tbody>
+      </table>
+    </section>
+    <section
+      class="container mt-64"
+      id="proyectoForm"
+      style="display: none"
+    ></section>
+    <section
+      class="container mt-64"
+      id="detalleProyecto"
+      style="display: none"
+    ></section>
+
+    <div id="footer"></div>
+  </body>
+</html>
